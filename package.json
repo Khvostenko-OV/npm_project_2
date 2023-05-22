@@ -1,0 +1,28 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "my game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khvostenko-OV/npm_project_2.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "oleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khvostenko-OV/npm_project_2/issues"
+  },
+  "homepage": "https://github.com/Khvostenko-OV/npm_project_2#readme",
+  "devDependencies": {
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
