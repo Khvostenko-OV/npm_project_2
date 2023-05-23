@@ -4,8 +4,9 @@
   "description": "my game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "test": "jest",
+    "build": "webpack --mode production",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,19 @@
   },
   "homepage": "https://github.com/Khvostenko-OV/npm_project_2#readme",
   "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-jest": "^29.5.0",
     "babel-loader": "^9.1.2",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.5.0",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "core-js": "^3.30.2"
   }
 }
