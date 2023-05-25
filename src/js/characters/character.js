@@ -30,39 +30,3 @@ export default class Character {
     this.health = Math.max(0, this.health - points * (1 - this.defence / 100));
   }
 }
-
-export class Bowman extends Character {
-  constructor(name) {
-    super(name, 'Bowman', 100, 1, 25, 25);
-  }
-}
-
-export class Daemon extends Character {
-  constructor(name) {
-    super(name, 'Daemon', 100, 1, 10, 40);
-  }
-}
-
-export class Magician extends Character {
-  constructor(name) {
-    super(name, 'Magician', 100, 1, 10, 40);
-  }
-}
-
-export class Swordsman extends Character {
-  constructor(name) {
-    super(name, 'Swordsman', 100, 1, 40, 10);
-  }
-}
-
-export class Undead extends Character {
-  constructor(name) {
-    super(name, 'Undead', 100, 1, 25, 25);
-  }
-}
-
-export class Zombie extends Character {
-  constructor(name) {
-    super(name, 'Zombie', 100, 1, 40, 10);
-  }
-}

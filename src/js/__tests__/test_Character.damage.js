@@ -1,4 +1,4 @@
-import Character from '../domain';
+import Character from '../characters/character';
 
 const hero = new Character('hero', 'Bowman', 100, 1, 25, 25);
 
