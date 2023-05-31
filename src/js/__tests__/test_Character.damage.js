@@ -1,8 +1,19 @@
 import Character from '../characters/character';
 
-const hero = new Character('hero', 'Bowman', 100, 1, 25, 25);
-
 test('Testing Character.damage', () => {
+  const hero = new Character('hero', 'Bowman', 25, 25);
   hero.damage(100);
-  expect(hero.health).toBe(25);
+  const result = {
+    name: 'hero', type: 'Bowman', health: 25, level: 1, attack: 25, defence: 25,
+  };
+  expect(hero).toEqual(result);
+});
+
+test('Testing Character.damage health is 0', () => {
+  const hero = new Character('hero', 'Bowman', 25, 25);
+  hero.damage(200);
+  const result = {
+    name: 'hero', type: 'Bowman', health: 0, level: 1, attack: 25, defence: 25,
+  };
+  expect(hero).toEqual(result);
 });
