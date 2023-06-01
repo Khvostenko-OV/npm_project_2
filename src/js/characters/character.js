@@ -14,6 +14,7 @@ export default class Character {
     this.level = 1;
     this.attack = attack;
     this.defence = defence;
+    this.special = [];
   }
 
   levelUp() {
@@ -29,6 +30,18 @@ export default class Character {
   damage(points) {
     if (this.defence < 100) {
       this.health = Math.max(0, this.health - points * (1 - this.defence / 100));
+    }
+  }
+
+  addSpecial(id, name, icon, description = '') {
+    for (const spec of this.special) {
+      if (id === spec.id) {
+        return;
+      }
+    }
+    this.special.push({ id, name, icon });
+    if (description) {
+      this.special[this.special.length - 1].description = description;
     }
   }
 }
