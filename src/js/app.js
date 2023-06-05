@@ -3,6 +3,7 @@ import Game from './game.js';
 // import Bowman from './characters/bowman.js';
 // import PropertyList from './propery_list.js';
 // import GetSpecial from './get_special.js';
+// import Validator from './validator.js';
 
 const game = new Game();
 game.start();
