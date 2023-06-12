@@ -35,6 +35,10 @@ export default class Character {
     }
   }
 
+  hit(distance=1) {
+    return this.attack
+  }
+
   addSpecial(id, name, icon, description = '') {
     for (const spec of this.special) {
       if (id === spec.id) {
