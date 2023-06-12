@@ -1,12 +1,14 @@
+import { GameErrors } from "../errors";
+
 export const typeList = ['Bowman', 'Daemon', 'Magician', 'Swordsman', 'Undead', 'Zombie'];
 
 export default class Character {
   constructor(name, type, attack = 0, defence = 0) {
     if (name.length < 2 || name.length > 10) {
-      throw new Error('Недопустимое имя (длина 2-10 символов)!');
+      throw new Error(GameErrors.translate(3));
     }
     if (!typeList.includes(type)) {
-      throw new Error('Неверный тип персонажа!');
+      throw new Error(GameErrors.translate(2));
     }
     this.name = name;
     this.type = type;
@@ -19,7 +21,7 @@ export default class Character {
 
   levelUp() {
     if (this.health === 0) {
-      throw new Error('Персонаж мёртв!');
+      throw new Error(GameErrors.translate(5));
     }
     this.level += 1;
     this.attack *= 1.2;
