@@ -6,6 +6,21 @@ export default class Team {
     this.members = new Set();
   }
 
+// Решение через итератор:
+
+//  [Symbol.iterator]() {
+//    return this.members[Symbol.iterator]();
+//  }
+
+
+// Решение через генератор:
+
+  *[Symbol.iterator]() {
+    for (let m of this.members) {
+      yield m;
+    }
+  }
+
   add(person) {
     if (!(person instanceof Character)) {
       throw new Error(GameErrors.translate(1));
